@@ -7,24 +7,44 @@
     "title": "CSS",
     "imageSrc": "skills/css.png"
   },
+   {
+    "title" :"Javascript",
+    "imageSrc" :"skills/download.png"
+  },
   {
     "title": "React",
     "imageSrc": "skills/react.png"
   },
   {
+    "title": "TailwindCSS",
+    "imageSrc": "skills/tailwind.jpg"
+  },
+  {
     "title": "Node",
     "imageSrc": "skills/node.png"
   },
-  {
-    "title": "GraphQL",
-    "imageSrc": "skills/graphql.png"
-  },
-  {
+    {
     "title": "MongoDB",
     "imageSrc": "skills/mongodb.png"
   },
   {
     "title": "Figma",
     "imageSrc": "skills/figma.png"
+  },
+  {
+    "title" :"Canva",
+    "imageSrc" :"skills/canva.png"
+  },
+  {
+    "title" :"Javascript",
+    "imageSrc" :"skills/download.png"
+  }, 
+   {
+    "title" :"MySql",
+    "imageSrc" :"skills/mysql.png"
+  },
+   {
+    "title" :"Wireframe",
+    "imageSrc" :"skills/wireframe.png"
   }
 ]
