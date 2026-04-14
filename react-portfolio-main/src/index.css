@@ -3,8 +3,16 @@
   margin: 0;
   padding: 0;
   font-family: "Outfit", Arial, Helvetica, sans-serif;
+    cursor: url("/cursor.png") 16 16, auto;
 }
 
 html {
   scroll-behavior: smooth;
+}
+* {
+  cursor: none !important;
+}
+
+a, button, input, textarea, select {
+  cursor: none !important;
 }

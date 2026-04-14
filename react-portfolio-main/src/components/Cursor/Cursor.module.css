@@ -1,0 +1,21 @@
+/* Hide default cursor globally */
+:global(body) {
+  cursor: none;
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 48px; /* adjust size */
+  height: 48px;
+  pointer-events: none;
+  z-index: 9999;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
