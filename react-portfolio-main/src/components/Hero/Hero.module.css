@@ -94,6 +94,7 @@
   animation:
     fadeIn 1s ease 0.4s forwards,
     floating 4s ease-in-out 1.4s infinite;
+    margin-top: 80px;
 }
 
 /* ── Blur orbs ── */
