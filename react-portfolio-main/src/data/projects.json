@@ -1,24 +1,24 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
+    "title": "Timelazy",
+    "imageSrc": "projects/timelazy.png",
+    "description": "Timelazy is an AI-powered timetable generator that automates scheduling for schools and colleges with smart, conflict-free planning.",
+    "skills": ["React", "Flask", "MYSQL"],
     "demo": "https://www.example.com",
     "source": "https://www.github.com"
   },
   {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
+    "title": "Music Player",
+    "imageSrc": "projects/music.png",
+    "description": "Interactive Music Experience-A modern music web app for browsing and playing songs with a smooth, responsive UI.",
+    "skills": ["HTML", "CSS", "Javascript"],
     "demo": "https://www.example.com",
     "source": "https://www.github.com"
   },
   {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
+    "title": "Club Connect",
+    "imageSrc": "projects/club.jpeg",
+    "description": "Connecting Student Communities -A real-time platform to enhance interaction between college clubs and students.",
     "skills": ["React", "Express", "Node"],
     "demo": "https://www.example.com",
     "source": "https://www.github.com"

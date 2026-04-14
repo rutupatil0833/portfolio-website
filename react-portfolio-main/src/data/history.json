@@ -6,6 +6,14 @@
     "endDate": "Feb,2026",
     "experiences": ["Music Player app with integration of 500+songs", "Gallery Creation with 100+ images "],
     "imageSrc": "history/codealpha.jpeg"
+  },
+  {
+    "role": "Java Fullstack Developer",
+    "organisation": "Eduskill",
+    "startDate": "Jan, 2026",
+    "endDate": "Mar,2026",
+    "experiences": ["Worked on full stack development using Java", "Built responsive web pages and learned backend integration"],
+    "imageSrc": "history/eduskill.png"
   }
  
 

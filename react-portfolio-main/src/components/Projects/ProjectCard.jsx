@@ -34,16 +34,7 @@ export const ProjectCard = ({
           ))}
         </ul>
 
-        <div className={styles.links}>
-          <a href={demo} className={`${styles.link} ${styles.linkPrimary}`}
-             target="_blank" rel="noreferrer">
-            Demo
-          </a>
-          <a href={source} className={`${styles.link} ${styles.linkGhost}`}
-             target="_blank" rel="noreferrer">
-            Source
-          </a>
-        </div>
+   
       </div>
 
       <div className={styles.shimmer} />
