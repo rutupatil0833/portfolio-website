@@ -7,6 +7,7 @@ export const ProjectCard = ({
 }) => {
   return (
     <div className={styles.card}>
+
       {active && (
         <div className={styles.activeBadge}>
           <span className={styles.activeDot} />
@@ -20,27 +21,32 @@ export const ProjectCard = ({
           alt={`Screenshot of ${title}`}
           className={styles.image}
         />
+        <div className={styles.imgOverlay} />
       </div>
 
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
+      <div className={styles.body}>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
 
-      <ul className={styles.skills}>
-        {skills.map((skill, id) => (
-          <li key={id} className={styles.skill}>
-            {skill}
-          </li>
-        ))}
-      </ul>
+        <ul className={styles.skills}>
+          {skills.map((skill, id) => (
+            <li key={id} className={styles.skill}>{skill}</li>
+          ))}
+        </ul>
 
-      <div className={styles.links}>
-        <a href={demo} className={styles.link} target="_blank" rel="noreferrer">
-          Demo
-        </a>
-        <a href={source} className={styles.link} target="_blank" rel="noreferrer">
-          Source
-        </a>
+        <div className={styles.links}>
+          <a href={demo} className={`${styles.link} ${styles.linkPrimary}`}
+             target="_blank" rel="noreferrer">
+            Demo
+          </a>
+          <a href={source} className={`${styles.link} ${styles.linkGhost}`}
+             target="_blank" rel="noreferrer">
+            Source
+          </a>
+        </div>
       </div>
+
+      <div className={styles.shimmer} />
     </div>
   );
 };
