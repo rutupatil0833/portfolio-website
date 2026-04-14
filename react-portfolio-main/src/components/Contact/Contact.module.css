@@ -1,27 +1,92 @@
 @import "../../vars.css";
 
 .container {
-  color: var(--color-text);
+  position: relative;
+  overflow: hidden;
+  background: #000000;
+  color: #ffffff;
+  width: 100vw;
   margin-top: 120px;
-  background-color: var(--color-secondary);
+  padding: 80px 10% 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 100vw;
-  padding: 58px 10%;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible .inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+  animation: gridScroll 12s linear infinite;
+}
+
+.orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(120,120,120,0.18) 0%, transparent 70%);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: orbPulse 6s ease-in-out infinite alternate;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  z-index: 1;
 }
 
-.text h2 {
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  animation: fadeIn 1s ease 0.2s both;
+}
+
+.heading {
   font-size: 80px;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 4px;
+  line-height: 1;
+  background: linear-gradient(135deg, #fff 40%, #555 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.text p {
-  font-size: 40px;
+.sub {
+  font-size: 22px;
   font-weight: 400;
-  letter-spacing: 2px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
 }
 
 .links {
@@ -29,36 +94,101 @@
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  gap: 26px;
+  gap: 28px;
+  z-index: 1;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 18px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+}
+
+.link:hover {
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.07);
+  transform: translateX(6px);
+}
+
+/* ── White icons — no invert needed ── */
+.link img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0.75);
+  transition: filter 0.25s ease;
+}
+
+.link:hover img {
+  filter: brightness(1);
 }
 
 .link a {
-  color: var(--color-text);
+  color: rgba(255,255,255,0.75);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
+  transition: color 0.25s ease;
+}
+
+.link:hover a {
+  color: #ffffff;
+}
+
+.copy {
+  margin-top: 60px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.05em;
+  z-index: 1;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  width: 100%;
+  text-align: center;
+  padding-top: 24px;
+}
+
+@keyframes gridScroll {
+  from { background-position: 0 0 }
+  to   { background-position: 0 60px }
+}
+
+@keyframes orbPulse {
+  from { opacity: 0.6; transform: translateX(-50%) scale(1) }
+  to   { opacity: 1;   transform: translateX(-50%) scale(1.1) }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px) }
+  to   { opacity: 1; transform: translateY(0) }
 }
 
 @media screen and (max-width: 830px) {
-  .container {
-    flex-direction: column;
-    gap: 23px;
-  }
-
-  .text {
-    display: flex;
+  .inner {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
-
+  .text {
+    align-items: center;
+  }
+  .heading {
+    font-size: 56px;
+  }
   .links {
     align-items: center;
+    width: 100%;
+  }
+  .link {
+    width: 100%;
+    justify-content: center;
+  }
+  .link:hover {
+    transform: translateY(-4px);
   }
 }
