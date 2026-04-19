@@ -6,8 +6,8 @@
   background: #000000;
   color: #ffffff;
   width: 100vw;
-  margin-top: 120px;
-  padding: 80px 10% 40px;
+  margin-top: 86px;
+  padding: 56px 7% 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,11 +44,11 @@
 
 .orb {
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(120,120,120,0.18) 0%, transparent 70%);
-  top: -200px;
+  top: -140px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
@@ -59,12 +59,12 @@
 .text {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   z-index: 1;
 }
 
 .eyebrow {
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
@@ -72,9 +72,9 @@
 }
 
 .heading {
-  font-size: 80px;
+  font-size: 56px;
   font-weight: 900;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   line-height: 1;
   background: linear-gradient(135deg, #fff 40%, #555 100%);
   -webkit-background-clip: text;
@@ -83,7 +83,7 @@
 }
 
 .sub {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 400;
   color: rgba(255,255,255,0.5);
   letter-spacing: 1px;
@@ -94,15 +94,15 @@
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  gap: 28px;
+  gap: 18px;
   z-index: 1;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 14px 24px;
+  gap: 13px;
+  padding: 10px 18px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.08);
   background: rgba(255,255,255,0.03);
@@ -116,10 +116,9 @@
   transform: translateX(6px);
 }
 
-/* ── White icons — no invert needed ── */
 .link img {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   filter: brightness(0.75);
   transition: filter 0.25s ease;
 }
@@ -131,7 +130,7 @@
 .link a {
   color: rgba(255,255,255,0.75);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.5px;
   transition: color 0.25s ease;
@@ -142,15 +141,15 @@
 }
 
 .copy {
-  margin-top: 60px;
-  font-size: 13px;
+  margin-top: 42px;
+  font-size: 12px;
   color: rgba(255,255,255,0.2);
   letter-spacing: 0.05em;
   z-index: 1;
   border-top: 1px solid rgba(255,255,255,0.06);
   width: 100%;
   text-align: center;
-  padding-top: 24px;
+  padding-top: 18px;
 }
 
 @keyframes gridScroll {
@@ -169,26 +168,48 @@
 }
 
 @media screen and (max-width: 830px) {
+  .container {
+    padding: 40px 5% 24px;
+  }
+
   .inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .text {
     align-items: center;
   }
+
   .heading {
-    font-size: 56px;
+    font-size: 38px;
   }
+
+  .sub {
+    font-size: 14px;
+  }
+
   .links {
     align-items: center;
     width: 100%;
   }
+
   .link {
     width: 100%;
     justify-content: center;
   }
+
   .link:hover {
     transform: translateY(-4px);
+  }
+
+  .link a {
+    font-size: 13px;
+  }
+
+  .copy {
+    font-size: 11px;
+    margin-top: 28px;
   }
 }

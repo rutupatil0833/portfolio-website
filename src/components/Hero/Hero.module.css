@@ -6,11 +6,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
+  margin-top: 32px;
   min-height: 80vh;
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 /* ── Canvas particles (cursor-reactive bg) ── */
@@ -35,9 +35,9 @@
 
 /* ── Title — typewriter effect ── */
 .title {
-  font-size: 72px;
+  font-size: 52px;
   font-weight: 900;
-  margin-bottom: 33px;
+  margin-bottom: 22px;
   font-family: var(--font-roboto);
   background: linear-gradient(90deg, #ffffff 0%, #a0a0a0 60%, #333 100%);
   -webkit-background-clip: text;
@@ -54,11 +54,11 @@
 
 /* ── Description ── */
 .description {
-  font-size: 20px;
+  font-size: 16px;
   font-family: var(--font-roboto);
-  margin-bottom: 52px;
+  margin-bottom: 36px;
   color: rgba(255, 255, 255, 0.7);
-  max-width: 540px;
+  max-width: 460px;
   line-height: 1.7;
   opacity: 0;
   animation: fadeIn 0.8s ease 2.2s forwards;
@@ -70,9 +70,9 @@
   color: #000000;
   background: #ffffff;
   border-radius: 100px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
-  padding: 16px 36px;
+  padding: 12px 28px;
   letter-spacing: 0.02em;
   opacity: 0;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
@@ -87,14 +87,14 @@
 
 /* ── Hero image ── */
 .heroImg {
-  width: 45%;
+  width: 42%;
   z-index: 1;
   filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.08));
   opacity: 0;
+  margin-top: 56px;
   animation:
     fadeIn 1s ease 0.4s forwards,
     floating 4s ease-in-out 1.4s infinite;
-    margin-top: 80px;
 }
 
 /* ── Blur orbs ── */
@@ -103,7 +103,7 @@
   width: 50vw;
   height: 50vw;
   min-width: 350px;
-  top: -128px;
+  top: -90px;
   left: -10vw;
   border-radius: 50%;
   background: rgba(80, 80, 80, 0.25);
@@ -118,7 +118,7 @@
   width: 70vw;
   height: 50vw;
   min-width: 350px;
-  top: 246px;
+  top: 170px;
   right: -25vw;
   border-radius: 50%;
   background: rgba(60, 60, 60, 0.2);
@@ -158,6 +158,23 @@
   to   { opacity: 0.9; transform: scale(1.08) }
 }
 
+/* ── Tablet (1024px and below) ── */
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .description {
+    font-size: 15px;
+    max-width: 380px;
+  }
+}
+
 /* ── Mobile ── */
 @media screen and (max-width: 830px) {
   .container {
@@ -172,7 +189,7 @@
   }
 
   .title {
-    font-size: 44px;
+    font-size: 36px;
     white-space: normal;
     border-right: none;
     width: 100%;
@@ -182,9 +199,16 @@
   .heroImg {
     width: 75%;
     margin-bottom: 32px;
+    margin-top: 0;
   }
 
   .description {
-    font-size: 16px;
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .contactBtn {
+    font-size: 14px;
+    padding: 11px 24px;
   }
 }
