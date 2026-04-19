@@ -8,8 +8,7 @@ export const Hero = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const section = canvas.parentElement; // ← listen on whole section
-
+    const section = canvas.parentElement;
 
     const resize = () => {
       canvas.width  = canvas.offsetWidth;
@@ -38,15 +37,12 @@ export const Hero = () => {
     let mx = canvas.width / 2;
     let my = canvas.height / 2;
 
-    const onMove = e => {                      // ← now on section
-
+    const onMove = e => {
       const r = section.getBoundingClientRect();
-
       mx = e.clientX - r.left;
       my = e.clientY - r.top;
     };
-    section.addEventListener("mousemove", onMove); // ← changed
-
+    section.addEventListener("mousemove", onMove);
 
     const drawShape = (ctx, s) => {
       const cx = canvas.width / 2;
@@ -91,8 +87,7 @@ export const Hero = () => {
 
     return () => {
       cancelAnimationFrame(raf);
-      section.removeEventListener("mousemove", onMove); // ← changed
-
+      section.removeEventListener("mousemove", onMove);
       window.removeEventListener("resize", resize);
     };
   }, []);
@@ -112,11 +107,19 @@ export const Hero = () => {
           and other real-world projects. Focused on clean design,
           performance, and scalable solutions.
         </p>
-       
-<a href="#contact" className={styles.contactBtn}>
-
-  Contact Me
-</a>
+        <div className={styles.btnGroup}>
+          <a href="#contact" className={styles.contactBtn}>
+            Contact Me
+          </a>
+          <a
+            href={getImageUrl("resume/resume.pdf")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.resumeBtn}
+          >
+            Resume
+          </a>
+        </div>
       </div>
       <img
         src={getImageUrl("hero/self1.png")}

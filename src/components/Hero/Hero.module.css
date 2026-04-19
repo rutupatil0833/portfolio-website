@@ -64,6 +64,16 @@
   animation: fadeIn 0.8s ease 2.2s forwards;
 }
 
+/* ── Button group ── */
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 2.6s forwards;
+}
+
 /* ── Contact button ── */
 .contactBtn {
   text-decoration: none;
@@ -74,15 +84,32 @@
   font-weight: 700;
   padding: 12px 28px;
   letter-spacing: 0.02em;
-  opacity: 0;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  animation: fadeIn 0.8s ease 2.6s forwards;
 }
 
 .contactBtn:hover {
   background: #e2e2e2;
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+}
+
+/* ── Resume button ── */
+.resumeBtn {
+  text-decoration: none;
+  color: #ffffff;
+  background: #c0392b;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 28px;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.resumeBtn:hover {
+  background: #a93226;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(192, 57, 43, 0.4);
 }
 
 /* ── Hero image ── */
@@ -207,8 +234,18 @@
     max-width: 100%;
   }
 
-  .contactBtn {
+  .btnGroup {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .contactBtn,
+  .resumeBtn {
     font-size: 14px;
     padding: 11px 24px;
+    width: 100%;
+    text-align: center;
   }
 }
